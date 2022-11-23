@@ -46,16 +46,22 @@ if  (pokemon.size > 1.5) {
     
     for (let i=0; i < repository.length; i++) {
     if (repository[i].height <0.9) {
-    console.log(repository[i].name + "0.5");
+    document.write(repository[i].name + '<br>');
     }else if (repository[i].height >1.6);{
-      console.log(repository[i].name +"1.6" +"that's a big pokemon")
+      document.write(repository[i].name +"1.6" +"that's a big pokemon" + )
     }
       }
+      let repository = [
+        {name: 'Bulbsaur', height: 0.5},
+        {name: 'Charizard', height: 1.7},
+        {name: 'Squirtle', height: 0.7}
+        ];
+    
+        for (let i = 0; i < repository.length; i++) {
+          if (repository[i].height < 0.9) {
+              document.write(repository[i].name + '<br>');
+          } else if (repository[i].height > 1.6) {
+              document.write(repository[i].name + " that's a big pokemon" + '<br>');
+          }
+      }
   
-  //if (condition1) {
-    // block of code to be executed if condition1 is true
-  //} else if (condition2) {
-    // block of code to be executed if the condition1 is false and condition2 is true
-  //} else {
-    // block of code to be executed if the condition1 is false and condition2 is false
-  //}
