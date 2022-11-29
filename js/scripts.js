@@ -16,18 +16,25 @@ let pokemonListRepository =
      }
 ];
 
-  //wow! that's big
-  let repository = [
-    {name: 'Bulbsaur', height: 0.5},
-    {name: 'Charizard', height: 1.7},
-    {name: 'Squirtle', height: 0.7}
-    ];
+ pokemonListRepository.forEach(function (user) {
+   {
+     console.log(user.name + 'is' + user.height + ' tall');
+   }
+ });
+
+ 
+     //wow! that's big
+  //let repository = [
+    //{name: 'Bulbsaur', height: 0.5},
+    //{name: 'Charizard', height: 1.7},
+   // {name: 'Squirtle', height: 0.7}
+    //];
     
-    for (let i=0; i < repository.length; i++) {
-    if (repository[i].height <0.9) {
-    document.write(repository[i].name + '<br>');
-    }else if (repository[i].height >1.6) {
-      document.write(repository[i].name +"1.6" +"that's a big pokemon" + '<br>')
-    }
-      }
+    //for (let i=0; i < repository.length; i++) {
+    //if (repository[i].height <0.9) {
+    //document.write(repository[i].name + '<br>');
+    //}else if (repository[i].height >1.6) {
+     // document.write(repository[i].name +"1.6" +"that's a big pokemon" + '<br>')
+    //}
+     // }
       
