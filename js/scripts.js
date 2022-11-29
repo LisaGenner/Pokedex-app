@@ -14,15 +14,52 @@ let pokemonListRepository =
       height: 1,
       types: ['water']
      }
-];
+]; 
 
- pokemonListRepository.forEach(function (user) {
-   {
-     console.log(user.name + 'is' + user.height + ' tall');
-   }
- });
+pokemonListRepository.forEach(function (user) {
+  {
+    console.log(user.name + 'is' + user.height + ' tall');
+  }
+});
 
- 
+let pokemonRepository = (function () {
+
+  let pokemonList = [ 
+{
+ name: 'Bulbsaur',
+ height: 0.7,
+ types: ['grass', 'poison']
+ },
+ {
+   name: 'Charizard',
+   height: 1.7,
+   types: ['fire', 'flying']
+ }
+] 
+
+function getAll () {
+return pokemonList;
+}
+function add (pokemon) {
+   pokemonList.push(pokemon);
+}
+
+return {
+       getAll: getAll,
+add: add
+}
+}) ()
+
+console.log(pokemonRepository.getAll())
+
+
+
+
+
+
+
+
+
      //wow! that's big
   //let repository = [
     //{name: 'Bulbsaur', height: 0.5},
