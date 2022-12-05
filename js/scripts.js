@@ -2,52 +2,78 @@
 let pokemonListRepository =
 [
   {
-    name: 'Butterfree',
+    name: 'Bulbsaur',
     height: 0.7,
     types: ['grass', 'poison']
   },
   {
-    name: 'Jigglyfuff',
+    name: 'Charizard',
     height: 1.7,
     types: ['fire', 'flying']
   },
   {
-    name: 'Pikachu',
+    name: 'Squirtle',
     height: 1,
     types: ['water']
   }
 ];
 
 let pokemonType = [
-  { name: "Butterfree", type: 'bug' },
-  { name: "Jigglyfuff", type: 'fairy' },
-  { name: "Pikachu", type: 'electric' }
+{ name: "Butterfree", type: 'bug' },
+{ name: "Jigglyfuff", type: 'fairy' },
+{ name: "Pikachu", type: 'electric' }
 ];
 
 pokemonListRepository.forEach(function (user) {
+{
+  if (user.type === 'electric') {
+    document.write(user.name + "is an electric pokemon <br/>")
+  
+  } else if (user.type === 'bug') {
+  document.write(user.name + "is an bug pokemon <br/>")
+  
+} else if (user.type === 'fairy')
+document.write(user.name + "is a fairy pokemon <br/>")
+}});
+
+let pokemonRepository = (function () {
+
+let pokemonList = [
   {
-    if (user.type === 'electric') {
-      document.write(user.name + "is an electric pokemon <br/>")
+    name: 'Bulbsaur',
+    height: 0.7,
+    types: ['grass', 'poison']
+  },
+  {
+    name: 'Charizard',
+    height: 1.7,
+    types: ['fire', 'flying']
+  },
+  {
+    name: 'Squirtle',
+    height: 1,
+    types: ['water']
+  }
+]
 
-    } else if (user.type === 'bug') {
-      document.write(user.name + "is an bug pokemon <br/>")
+function getAll() {
+  return pokemonList;
+}
 
-    } else if (user.type === 'fairy')
-      document.write(user.name + "is a fairy pokemon <br/>")
+function add (pokemon) {
+  pokemonList.push(pokemon);
+}
+
+return {
+  add: add,
+  getAll: getAll,
 };
+})();
 
-function getAll () {
-    return (pokemonList);
-  }
-  function add (pokemon) {
-    pokemonList.push(pokemon);
-  }
-  return {
-    add: add,
-    getAll: getAll,
-   }
-()
+console.log(pokemonRepository.getAll())
+
+
+pokemonRepository.getAll().forEach(function (pokemon) {
+pokemonRepository.addListItem(pokemon)
 
 });
-
-console.log (pokemonListRepository.getAll())
