@@ -55,10 +55,6 @@ let pokemonRepository = (function () {
 console.log(pokemonRepository.getAll())
 
 
-pokemonRepository.getAll().forEach(function (pokemon) {
-  pokemonRepository.add(pokemon)
-});
-
 pokemonListRepository.forEach(function (user) {
   {
     if (user.types.includes('electric')) {
