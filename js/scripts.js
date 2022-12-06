@@ -1,79 +1,76 @@
-
 let pokemonListRepository =
-[
-  {
-    name: 'Bulbsaur',
-    height: 0.7,
-    types: ['grass', 'poison']
-  },
-  {
-    name: 'Charizard',
-    height: 1.7,
-    types: ['fire', 'flying']
-  },
-  {
-    name: 'Squirtle',
-    height: 1,
-    types: ['water']
-  }
-];
+  [
+    {
+      name: 'Butterfree',
+      height: 0.7,
+      types: ['bug']
+    },
+    {
+      name: 'Jigglyfuff',
+      height: 1.7,
+      types: ['fairy']
+    },
+    {
+      name: 'Pikachu',
+      height: 1,
+      types: ['electric']
+    }
+  ];
 
-let pokemonType = [
-{ name: "Butterfree", type: 'bug' },
-{ name: "Jigglyfuff", type: 'fairy' },
-{ name: "Pikachu", type: 'electric' }
-];
-
-pokemonListRepository.forEach(function (user) {
-{
-  if (user.type === 'electric') {
-    document.write(user.name + "is an electric pokemon <br/>")
-  
-  } else if (user.type === 'bug') {
-  document.write(user.name + "is an bug pokemon <br/>")
-  
-} else if (user.type === 'fairy')
-document.write(user.name + "is a fairy pokemon <br/>")
-}});
 
 let pokemonRepository = (function () {
 
-let pokemonList = [
-  {
-    name: 'Bulbsaur',
-    height: 0.7,
-    types: ['grass', 'poison']
-  },
-  {
-    name: 'Charizard',
-    height: 1.7,
-    types: ['fire', 'flying']
-  },
-  {
-    name: 'Squirtle',
-    height: 1,
-    types: ['water']
+  let pokemonList = [
+    {
+      name: 'Bulbsaur',
+      height: 0.7,
+      types: ['grass', 'poison']
+    },
+    {
+      name: 'Charizard',
+      height: 1.7,
+      types: ['fire', 'flying']
+    },
+    {
+      name: 'Squirtle',
+      height: 1,
+      types: ['water']
+    }
+  ]
+
+  function getAll() {
+    return pokemonList;
   }
-]
 
-function getAll() {
-  return pokemonList;
-}
+  function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
 
-function add (pokemon) {
-  pokemonList.push(pokemon);
-}
-
-return {
-  add: add,
-  getAll: getAll,
-};
+  return {
+    add: add,
+    getAll: getAll,
+  };
 })();
 
 console.log(pokemonRepository.getAll())
 
 
 pokemonRepository.getAll().forEach(function (pokemon) {
-pokemonRepository.addListItem(pokemon)
+  pokemonRepository.add(pokemon)
+});
 
+pokemonListRepository.forEach(function (user) {
+  {
+    if (user.types.includes('electric')) {
+      document.write(user.name + " is an electric pokemon <br/>")
+
+    } else if (user.types.includes('bug')) {
+      document.write(user.name + " is an bug pokemon <br/>")
+
+    } else if (user.types.includes('fairy')) {
+      document.write(user.name + " is a fairy pokemon <br/>")
+    } else {
+      document.write(user.name + " is a pokemon <br/>")
+    }
+  }
 });
