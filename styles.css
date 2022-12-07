@@ -1,6 +1,6 @@
 .button-class {
     background-color: #4caf50; /* Green */
-    border: none;
+    border: 5px red solid;
     color: white;
     padding: 16px 32px;
     text-align: center;
@@ -14,4 +14,7 @@
     background-color: white;
     color: black;
     border: 2px solid #4caf50;
+  }
+  .selected{
+    border: 5px red solid;
   }
