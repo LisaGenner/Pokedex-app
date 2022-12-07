@@ -1,72 +1,54 @@
-let pokemonListRepository =
-  [
-    {
-      name: 'Butterfree',
-      height: 0.7,
-      types: ['bug']
-    },
-    {
-      name: 'Jigglyfuff',
-      height: 1.7,
-      types: ['fairy']
-    },
-    {
-      name: 'Pikachu',
-      height: 1,
-      types: ['electric']
-    }
-  ];
-
-
 let pokemonRepository = (function () {
-
-  let pokemonList = [
+  let repository = [
     {
       name: 'Bulbsaur',
       height: 0.7,
-      types: ['grass', 'poison']
+      types: ['grass', 'poison'],
     },
     {
       name: 'Charizard',
       height: 1.7,
-      types: ['fire', 'flying']
+      types: ['fire', 'flying'],
     },
     {
       name: 'Squirtle',
       height: 1,
-      types: ['water']
+      types: ['water'],
     }
-  ]
+  ];
 
   function getAll() {
-    return pokemonList;
+    return repository;
   }
+function addListItem(pokemon) {
+//created new varible, defined in class HTML
+let pokemonList = document.querySelector (".pokemon-list"); 
+  
+//created li element var
+let listpokemon = document.createElement("li"); 
 
-  function add(pokemon) {
-    pokemonList.push(pokemon);
-  }
+//created button tag
+let button = document.createElement("button");
 
-  return {
+//placeholder inside of button
+button.innerText = Pokemon.name; 
+//changed name in innertext to list actual name vs placeholder
+// button.innerText = pokemon.name;
+
+//added CSS
+button.classList.add("button-class");
+listpokemon.appendChild(button);
+pokemonList.appendChild(listpokemon);
+}
+
+return {
     add: add,
     getAll: getAll,
+    addListItem : addListItem
   };
+
 })();
 
-console.log(pokemonRepository.getAll())
-
-
-pokemonListRepository.forEach(function (user) {
-  {
-    if (user.types.includes('electric')) {
-      document.write(user.name + " is an electric pokemon <br/>")
-
-    } else if (user.types.includes('bug')) {
-      document.write(user.name + " is an bug pokemon <br/>")
-
-    } else if (user.types.includes('fairy')) {
-      document.write(user.name + " is a fairy pokemon <br/>")
-    } else {
-      document.write(user.name + " is a pokemon <br/>")
-    }
-  }
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
 });
