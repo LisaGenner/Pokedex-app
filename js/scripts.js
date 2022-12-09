@@ -41,14 +41,14 @@ let pokemonRepository = (function () {
   function addListItem(pokemon) {
     //created new varible, defined in class HTML
     let pokemonList = document.querySelector(".pokemon-list");
-  };
   //created li element var
   let listpokemon = document.createElement("li");
 
   //created button tag
   let button = document.createElement("button");
-  button.addEventListner('click'), function (event) {
-    showDetails(pokemon);
+  button.addEventListner('click', function (event) {
+    
+  });
 
     //placeholder inside of button
     button.innerText = pokemon.name;
@@ -57,6 +57,7 @@ let pokemonRepository = (function () {
 
     //added CSS
     button.classList.add("button-class");
+
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
   };
@@ -65,8 +66,7 @@ let pokemonRepository = (function () {
     add: add,
     getAll: getAll,
     addListItem: addListItem,
-    showDetails: showDetails,
-  };
+    };
 })();
 
   pokemonRepository.add({ name: "Pikachu", height: 0.3, types: ["electric"] });
