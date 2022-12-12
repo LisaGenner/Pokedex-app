@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=3';
 
   function add(pokemon) {
     if (
@@ -18,16 +18,16 @@ let pokemonRepository = (function () {
   };
 
   function addListItem(pokemon) {
-    let pokemonList = document.querySelector(".pokemon-list");   //created new varible, defined in class HTML
-    let listpokemon = document.createElement("li");//created li element var
-    let button = document.createElement("button");//created button tag
-    button.innerText = pokemon.name;    //placeholder inside of button
+    let pokemonList = document.querySelector(".pokemon-list");   //created new varible, defined in class HTML. creating ref variable names pokemon-list. go to HTML file and grab that name
+    let listpokemon = document.createElement("li");//created li element var. i want to create a new list item, child under the "ul" parent. "list item". created a tag.  the var is going to hold the element that you are going to create.
+    let button = document.createElement("button");//created button var tag, button var holding the 
+    button.innerText = pokemon.name;    //placeholder inside of button. access innertext property of the button.   
     //changed name in innertext to list actual name vs placeholder
     // button.innerText = pokemon.name;
-    button.classList.add("button-class");//added CSS
-    listpokemon.appendChild(button);
-    pokemonList.appendChild(listpokemon);
-    button.addEventListener("click", function (event) {
+    button.classList.add("button-class");//added CSS, drilling down the button in CSS
+    listpokemon.appendChild(button); //push button into the li (putting something into the button, add child), puts the created button into the li
+    pokemonList.appendChild(listpokemon); //grab the list item (li) and push to the pokemon list (insert or push to the list)
+    button.addEventListener("click", function (event) { //go to the button and i want to add the event.  user can click on the button, i want to do something i want to run this fuction that is inside the function line 30-32
       showDetails(pokemon);
     });
   }
