@@ -7,7 +7,7 @@ body {
   display: none;
 }
 
-#modal-container.is-visible {
+.modal-container.is-visible {
   position: fixed;
   padding: 20px;
   box-sizing: border-box;
