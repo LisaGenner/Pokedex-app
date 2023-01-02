@@ -14,13 +14,15 @@ let pokemonRepository = (function () {
   //     console.log("pokemon is not correct");
   //   }
   // };
-  function getAll() {
-    return pokemonList;
-  };
+
   function add(pokemon) {
     pokemonList.push(pokemon);
   }
 
+  function getAll() {
+    return pokemonList;
+  };
+ 
 function addListItem(pokemon) {
   let listItem = $('<li class="list-group-item"></li>');
   let button = $('<button class="pokemon-button btn btn-warning" data-target="#pokemon-modal" data-toggle="modal">' + pokemon.name +  '</button>');
@@ -142,3 +144,4 @@ pokemonRepository.loadList().then(function () {
   });
 });
 // pokemonRepository.loadList()
+
