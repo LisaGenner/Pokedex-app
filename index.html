@@ -10,58 +10,58 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body style class>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" style>
-   <div class="container">
-    <a class="navbar-brand" href="#">Pokedex</a>
-   </div>
-  </nav>
-     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Pokemon List
-  </button>
+<body>
+  <header class="pokedex">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" style>
+      <div class="container"></div>
+      <!-- <a class="navbar-brand" href="#">Pokedex</a> -->
+    </nav>
+  </header>
+  <h1 class="pokemon-header">Pokedex</h1>
+  <ul class="pokemon-list list-group"></ul>
+  <!-- Button trigger modal -->
+
+
+  <!--   </button> -->
 
   <!-- Modal -->
-      <div class="pokedex"></div>
-        <h1 class="pokemon-header">Pokemon App</h1>
-        <ul class="pokemon-list list-group"></ul>
-  
-    <div class="modal fade" id="pokemon-model" tabindex="-1" role="dialog" aria-labelledby="pokemon-modal" style="display:none;" aria-modal="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">pokemon.name</h2>
-          <!--title of modal, display pokemon name -->
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <!-- child Element to the title-->
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  <div class="pokedex">
+    <div class="pokemon-header"></div>
+
+    <div class="modal fade" id="pokemon-modal" tabindex="-1" role="dialog" aria-labelledby="pokemon-modal"
+      style="display:none;" aria-modal="true">
+
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">pokemon.name</h2>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" class="btn-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <!--Scripts-->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <!-- dont recommend using slim build as it excludes all animation -->
   <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
-  
+
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
-  
+
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
-<!--   <script src="js/promise-polyfill.js"></script>
-  <script src="js/fetch-polyfill.js"></script> -->
+  <script src="js/promise-polyfill.js"></script>
   <script src="script.js"></script>
 </body>
 
