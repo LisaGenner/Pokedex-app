@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=5";
+  const apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=20";
   let pokemonListElement = $(".pokemon-list");
 
   function getAll() {
@@ -25,6 +25,7 @@ let pokemonRepository = (function () {
       showDetails(pokemon);
     });
   }
+
   $('[data-dismiss="modal"]').on("click", function () {
     let pokemonModal = $(".pokemon-modal");
     pokemonModal.hide();

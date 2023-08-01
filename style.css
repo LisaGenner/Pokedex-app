@@ -8,11 +8,11 @@ body {
 }
 
 .btn {
-  background-color: red;
+  background-color: rgb(86, 154, 180);
  }
 
 .btn:hover {
-  background-color: #296cdb;
+  background-color: #99a1ad;
 }
 
 .modal-container.is-visable {
@@ -68,10 +68,11 @@ body {
 .modal p {
   margin-bottom: 0;
 }
+
 .modal-header {
-  background-color: red;
-}
-.modal-footer {
-  background-color: red;
+  background-color: grey;
 }
 
+.modal-footer {
+  background-color: grey;
+}
