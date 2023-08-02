@@ -11,6 +11,7 @@ let pokemonRepository = (function () {
   }
 
   function addListItem(pokemon) {
+    //creating a list item (pokemons) with a button
     let listItem = $('<li class="list-group-item"></li>');
     let button = $(
       '<button class="pokemon-button btn btn-warning" data-target="#pokemon-modal" data-toggle="modal">' +
@@ -18,9 +19,10 @@ let pokemonRepository = (function () {
         "</button>"
     );
 
+    // add button to list item and add item(pokemon) to the pokemon list elements in index.html
     listItem.append(button);
     pokemonListElement.append(listItem);
-
+    // listens to clicks on pokemon button to show more details
     button.on("click", function () {
       showDetails(pokemon);
     });
@@ -33,6 +35,7 @@ let pokemonRepository = (function () {
     $(targetSelector).modal("show"); // Bootstrap’s own function to make the modal appear
   });
 
+  //adding Load list function for exercise
   function loadList() {
     return fetch(apiUrl)
       .then(function (response) {
@@ -40,7 +43,9 @@ let pokemonRepository = (function () {
       })
       .then(function (json) {
         json.results.forEach(function (item) {
+          //calling name ITEM, not pokemon name
           let pokemon = {
+            //needs to stay as pokemon otherwise buttons dont show up
             name: item.name,
             detailsUrl: item.url,
           };
@@ -59,6 +64,8 @@ let pokemonRepository = (function () {
         return response.json();
       })
       .then(function (details) {
+        // Now we add the details to the item
+
         item.height = details.height;
         item.types = details.types.map((type) => type.type.name);
         item.abilities = details.abilities.map(
@@ -67,6 +74,7 @@ let pokemonRepository = (function () {
         item.weight = details.weight;
 
         item.imageUrl = details.sprites.front_default;
+        //   return item; //need to return the item
       })
       .catch(function (e) {
         console.error(e);
