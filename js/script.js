@@ -1,4 +1,6 @@
-// list of pokemons loaded from an API
+let pokemonRepository = (function () {
+  let pokemonList = [];
+  // list of pokemons loaded from an API
 let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
 let pokemonListElement = $(".pokemon-list");
 
@@ -121,7 +123,7 @@ function getAll() {
     showDetails: showDetails,
     closeModal: closeModal,
   };
-// })();
+})()
 pokemonRepository.loadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
