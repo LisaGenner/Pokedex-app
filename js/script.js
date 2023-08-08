@@ -1,5 +1,5 @@
 // list of pokemons loaded from an API
-let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=5";
+let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
 let pokemonListElement = $(".pokemon-list");
 
 function getAll() {
@@ -10,10 +10,10 @@ function getAll() {
         pokemonList.push(pokemon);
       }
     
-      function addListItem(pokemon) {
-        //creating a list item (pokemons) with a button
-        let listItem = $('<li class="list-group-item"></li>');
-        let button = $(
+  function addListItem(pokemon) {
+    //creating a list item (pokemons) with a button
+    let listItem = $('<li class="list-group-item"></li>');
+    let button = $(
           '<button class="pokemon-button btn btn-warning" data-target="#pokemon-modal" data-toggle="modal">' +
             pokemon.name +
             "</button>"
