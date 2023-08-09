@@ -37,6 +37,29 @@ function getAll() {
       });
  
        //adding Load list function for exercise
+      '<button class="pokemon-button btn btn-warning" data-target="#pokemon-modal" data-toggle="modal">' +
+        pokemon.name +
+        "</button>"
+    );
+
+    // add button to list item and add item(pokemon) to the pokemon list elements in index.html
+    listItem.append(button);
+    pokemonListElement.append(listItem);
+    // listens to clicks on pokemon button to show more details
+    button.on("click", function () {
+      showDetails(pokemon);
+    });
+  }
+
+  $('[data-dismiss="modal"]').on("click", function () {
+    let pokemonModal = $(".pokemon-modal");
+    pokemonModal.hide();
+    let targetSelector = $(this).attr("data-target");
+    $(targetSelector).modal("show"); // Bootstrap’s own function to make the modal appear
+  });
+
+  //adding Load list function for exercise
+
   function loadList() {
     return fetch(apiUrl)
       .then(function (response) {
@@ -65,6 +88,7 @@ function getAll() {
         return response.json();
       })
       .then(function (details) {
+
          // Now we add the details to the item
 
          item.height = details.height;
@@ -74,6 +98,18 @@ function getAll() {
          );
          item.weight = details.weight;
          item.imageUrl = details.sprites.front_default;
+
+        // Now we add the details to the item
+
+        item.height = details.height;
+        item.types = details.types.map((type) => type.type.name);
+        item.abilities = details.abilities.map(
+          (abilities) => abilities.ability.name
+        );
+        item.weight = details.weight;
+
+        item.imageUrl = details.sprites.front_default;
+
         //   return item; //need to return the item
       })
       .catch(function (e) {
