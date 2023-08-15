@@ -4,19 +4,6 @@
 To build a small web application with HTML, CSS, and JavaScript that loads
 data from an external API and enables the viewing of data points in detail.
 
-# Requirements for the app, The 5 Ws
-1. Who—Your professional network, as well as potential employers.
-2. What—A JavaScript app built with HTML, CSS, and JavaScript, which uses an
-external API.
-3. When—Immediately! The code for the app can always be viewed in a repository like
-GitHub or GitLab.
-4. Where—Potential employers, clients, and collaborators might look at the code
-directly from your GitHub repository or be directed to your GitHub profile from your
-portfolio site (your project from Intro to Frontend Development).
-5. Why—For your potential employers, clients, and collaborators to see how you create
-the architecture of a JavaScript app, as well as how you test and debug your code.
-this application will pull from apiUrl.
-
 # User Goals
 Your users should be able to view a list of data and see more details for a given data item on demand.
 It’s up to you to come up with a type of data you want to display (see this list of public APIs for an
@@ -55,8 +42,8 @@ Web Hosting).
 
 ● The app works in Chrome, Firefox, Safari, Edge, and Internet Explorer 11
 
-   you will see 5 Pokemon which can be changed to additional by changing the limit to as many as you want to see
-            "https://pokeapi.co/api/v2/pokemon/?limit=5";.
+   you will see 150 Pokemon which can be changed to additional by changing the limit to as many as you want to see
+            "https://pokeapi.co/api/v2/pokemon/?limit=150";.
             
 
 
