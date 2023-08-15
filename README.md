@@ -12,7 +12,7 @@ display a list of Pokémon.
 
 # Key Features
 
-● Load data from an external source (API)
+● Load data from an external source (API).
 
 ● View a list of items
 
@@ -21,30 +21,24 @@ display a list of Pokémon.
 
 # Technical Requirements
 
-Required:
-
-● The app loads data from an external API; for instance, the Pokémon API.
+● The app loads data from an external API, the Pokémon API.
 
 ● The app displays a list of items loaded from that API after the page is loaded.
 
-● The app is enabled to view more details for a given list item (like a Pokémon) on
-demand, such as when clicking on a list item.
+● The app is enabled to view more details for a given list of Pokémon on
+demand, when clicking on a list item.
 
-● The app must have CSS styling.
+● CSS is used to style the app.
 
 ● The JavaScript code is formatted according to ESLint rules, via Prettier.
 
-○ The app allows searching for items (e.g., searching for Pokémon).
+○ The app allows searching for a Pokémon.
 
-● The app should be deployed to a publicly accessible platform like GitHub Pages (you can
-review how to do this in Intro to Frontend Development's Exercise 10: Code Quality, Testing, &
-Web Hosting).
+● The app is deployed to a publicly accessible platform in GitHub Pages.
 
 ● The app works in Chrome, Firefox, Safari, Edge, and Internet Explorer 11
 
    you will see 150 Pokemon which can be changed to additional by changing the limit to as many as you want to see
             "https://pokeapi.co/api/v2/pokemon/?limit=150";.
             
-
-
 Project dependencies (e.g., JavaScript version, ESLint rules)
